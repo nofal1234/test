@@ -1,0 +1,14 @@
+<header class="header">
+    <a href="#" class="logo">Nofal.</a>
+    <button id="menu-icon2" (click)="toggleNavbar()">
+        <i class='bx bx-menu' style="font-size: 2rem; color: white;"></i>
+    </button>
+    <nav class="navbar" [class.active]="isNavbarActive">
+        <a href="#home" (click)="closeNavbar()">Home</a>
+        <a href="#about" (click)="closeNavbar()">About</a>
+        <a href="#education" (click)="closeNavbar()">Education</a>
+        <a href="#skills" (click)="closeNavbar()">Skills</a>
+        <a href="#contact" (click)="closeNavbar()">Contact</a>
+    </nav>
+    <span class="active-nav"></span>
+</header>

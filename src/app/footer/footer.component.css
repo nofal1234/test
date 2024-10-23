@@ -1,0 +1,141 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 6%;
+    background-color: var(--second-bg-color);
+}
+
+.footer-text p {
+    color: var(--text-color);
+    font-size: 1.6rem; 
+    line-height: 1.8;
+    flex: 1 1 auto; 
+    text-align: center; 
+}
+
+.footer-iconTop {
+    display: flex; 
+    gap: 1rem; 
+}
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem; 
+    background: var(--main-color);
+    border: 0.2rem solid var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    transition: .5s;
+    z-index: -1;
+}
+
+.footer-iconTop a:hover::before {
+    width: 100%;
+    border: 3px solid var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.5rem; 
+    color: var(--bg-color);
+    transition: .5s;
+}
+
+.footer-iconTop a:hover i {
+    color: var(--main-color);
+}
+
+
+@media (max-width: 1200px) {
+    .footer-text p {
+        font-size: 1.4rem; 
+    }
+
+    .footer-iconTop a {
+        padding: .5rem; 
+    }
+
+    .footer-iconTop a i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center; 
+        padding: 1rem; 
+    }
+
+    .footer-iconTop {
+        justify-content: center; 
+        gap: 0.5rem; 
+    }
+
+    .footer-text p {
+        font-size: 1.2rem; 
+    }
+
+    .footer-iconTop a {
+        padding: .4rem; 
+    }
+
+    .footer-iconTop a i {
+        font-size: 1.8rem; 
+    }
+    @media (max-width: 520px) {
+        .footer-text p {
+            font-size: 1rem; 
+        }
+    
+        .footer-iconTop a {
+            padding: .3rem;
+        }
+    
+        .footer-iconTop a i {
+            font-size: 1.6rem; 
+        }
+    
+        .footer {
+            padding: 0.5rem; 
+        }
+    }
+    
+    @media (max-width: 462px) {
+        .footer-text p {
+            font-size: 0.9rem; 
+        }
+    
+        .footer-iconTop a {
+            padding: .2rem; 
+        }
+    
+        .footer-iconTop a i {
+            font-size: 1.4rem;
+        }
+    
+        .footer {
+            padding: 0.3rem; 
+        }
+    
+        .footer-iconTop {
+            gap: 0.3rem; 
+        }
+    }
+    
+}

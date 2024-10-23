@@ -1,0 +1,324 @@
+.home{
+    display: flex;
+     align-items: center;
+     padding: 0 9% ;
+     height: 100vh;
+     
+ }
+ .home-content{
+     max-width: 60rem;
+ }
+ .home-content h1{
+     font-size: 5.6rem;
+     font-weight: 700;
+     line-height: 1.3;
+ }
+ .home-content h1 span{
+     color: var(--text-color);
+ }
+ .home-content.text-animate{
+     position: relative;
+     width:32.8rem ;
+ }
+ .home-content .text-animate h3{
+ font-size: 3.2rem;
+ font-weight:700;
+ color: transparent;
+ -webkit-text-stroke: .7px var(--main-color);
+ background-image:linear-gradient(var(--main-color),var(--main-color));
+background-repeat:no-repeat ;
+-webkit-background-clip: text;
+background-position:33rem 0;
+animation: homeBgText 6s linear infinite;
+animation-delay: 2s;
+ }
+ .home-content .text-animate h3::before{
+  content:'';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width:0;
+     height:6%;
+     border-right: 2px solid var(--main-color);
+     z-index: -1;
+     animation: homeCursorText 6s linear infinite;
+     animation-delay: 2s;
+ }
+ .home-content p{
+     font-size: 1.6rem;
+     margin: 2rem 0 4rem;
+ }
+ .btn-box{
+     position: relative;
+     display: flex;
+     justify-content: space-between;
+     width:34.5rem;
+     height: 5rem;
+ }
+ .btn-box .btn{
+     position: relative;
+     display: inline-flex;
+     justify-content:center;
+     align-items: center;
+     width:15rem;
+     height: 100%;
+     background:var(--main-color);
+     border:.2rem solid var(--main-color);
+     border-radius:.8rem;
+     font-size: 1.8rem;
+     font-weight: 600;
+     letter-spacing: .1rem;
+     color: var(--bg-color);
+     z-index: 1;
+     overflow:hidden;
+     transition:.5s;
+ }
+ .btn-box .btn:nth-child(2){
+ background:transparent;
+ color: var(--main-color);
+ }
+ .btn-box .btn:nth-child(2)::before{
+ background: var(--main-color);
+ }
+ .btn-box .btn::before{
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index:-1 ;
+    transition:.5s;
+ }
+ .btn-box .btn:nth-child(2):hover{
+    color: var(--bg-color); 
+ }
+ .btn-box .btn:hover::before {
+     width: 100%;
+ }
+ .btn-box .btn:hover{
+     color: var(--main-color);
+ }
+ .home-sci{
+     position: absolute;
+     bottom: 4rem;
+     width: 170px;
+     width: 170px;
+     display: flex;
+     justify-content: space-between;
+ }
+ .home-sci a{
+     position:relative;
+     display:inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 40px;
+     background: transparent;
+     border: .2rem solid var(--main-color);
+     border-radius: 50%;
+     font-size: 20px;
+     color: var(--main-color);
+     z-index: 1;
+     overflow: hidden;
+     transition:.5s;
+ }
+ .home-sci a:hover{
+     background: var(--main-color);
+     color: var(--bg-color); 
+ }
+ .home-sci a::before{
+     content:'';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 100%;
+     background: var(--main-color);
+     z-index:-1;
+     transition:.5s;
+ }
+ .home-sci a:hover ::before{
+     width: 100%;
+ }
+ .homeimghover{
+     position: absolute;
+     top: 0;
+     left: 48%;
+     width: 55%;
+     height: 100%;
+     background: transparent;
+     transition:3s;
+ }
+ .homeimghover:hover{
+     background: var(--bg-color);
+     opacity: .8;
+ }
+ .right-content {
+    width: 55%;
+    position: relative;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-content img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    background-color: var(--bg-color);
+  }
+  @media (max-width: 768px) {
+    .home {
+      padding: 0 2rem;
+    }
+    .home-content {
+      max-width: 100%;
+    }
+    .home-sci a {
+      width: 30px;
+      height: 30px;
+      margin-top: 5rem;
+    }
+    .home-sci {
+      bottom: 2rem;
+      width: 120px;
+      height: 120px;
+    }
+    .homeimghover {
+      left: 35%;
+    }
+    .right-content {
+      width: 100%;
+      height: 100%;
+    }
+    .right-content img {
+      width: 60%;
+      height: 60%;
+
+    }
+
+    @media (max-width: 520px) {
+      .home {
+          padding: 0 1.5rem; 
+      }
+      
+      .home-content h1 {
+          font-size: 4.2rem; 
+      }
+      
+      .home-content p {
+          font-size: 1.4rem; 
+      }
+      
+      .btn-box {
+          flex-direction: column; 
+          width: 100%; 
+          gap: 0.5rem; 
+          margin: 20px;
+      }
+  
+      .btn-box .btn {
+          width: 50%; 
+          height: 3.5rem; 
+          font-size: 1.4rem; 
+      }
+  
+      .homeimghover {
+          left: 20%; 
+      }
+  
+      .right-content img {
+          width: 70%; 
+          height: 55%;
+      }
+  
+      .home-sci {
+          bottom: 1.5rem;
+          width: 100px;
+      }
+  
+      .home-sci a {
+          width: 25px;
+
+      }
+  }
+  
+  @media (max-width: 462px) {
+      .home-content h1 {
+          font-size: 3.6rem; 
+      }
+      
+      .home-content p {
+          font-size: 1.2rem; 
+      }
+  
+      .btn-box {
+          width: 100%; 
+          height: 10rem;
+          gap: 0.5rem; 
+          padding-bottom: 20px;
+      }
+  
+      .btn-box .btn {
+          width: 50%; 
+          height: 50rem;
+          font-size: 1.2rem; 
+      }
+  
+      .homeimghover {
+          left: 15%;
+      }
+  
+      .right-content img {
+          width: 65%; 
+          height: 55%;
+      }
+  
+      .home-sci {
+          bottom: 1rem; 
+          width: 80px;
+      }
+  
+      .home-sci a {
+          width: 22px;
+          height: 22px; 
+          margin-top: 10px;
+      }
+  }
+  
+    
+  }
+  @keyframes homeBgText{
+ 0%,
+ 10%,
+ 100%{
+  background-position: 44rem 0;
+ }
+ 65%,
+ 85%{
+  background-position: 0 0;
+ }
+  }
+  @keyframes homeCursorText{
+    0%,
+    10%,
+    100%{
+  width:0;
+    }
+    65%,
+    78%,
+    85%{
+    width:22%;
+    opacity: 1;
+    }
+    75%,
+    81%
+    {
+    opacity: 0;
+    }
+     }
+     
+  
+  
